@@ -1,0 +1,80 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-abicart",
+  "namespace": "tap_abicart",
+  "variant": "hotgluexyz",
+  "label": "Abicart",
+  "docs": "https://www.matatika.com/data-details/tap-abicart/",
+  "repo": "https://gitlab.com/hotglue/tap-abicart",
+  "pip_url": "git+https://gitlab.com/hotglue/tap-abicart.git",
+  "executable": "tap-abicart",
+  "description": "Abicart is an e-commerce platform for businesses to create and manage their online stores.\n\nAbicart is an all-in-one e-commerce platform that allows businesses to easily create and manage their online stores. With features such as customizable templates, product management, payment processing, and marketing tools, Abicart provides a user-friendly solution for businesses of all sizes to sell their products online. The platform also offers integrations with popular third-party services such as Google Analytics, Mailchimp, and Facebook, allowing businesses to streamline their online operations and reach a wider audience.",
+  "logo_url": "https://app.matatika.com/assets/logos/extractors/abicart.svg",
+  "capabilities": [
+    "about",
+    "schema-flattening",
+    "state",
+    "discover",
+    "catalog",
+    "stream-maps"
+  ],
+  "settings": [
+    {
+      "name": "api_url",
+      "kind": "string",
+      "value": "https://admin.abicart.se/backend/jsonrpc/v1/",
+      "label": "API URL",
+      "description": "The URL endpoint for the Abicart API.",
+      "protected": false
+    },
+    {
+      "name": "flattening_enabled",
+      "kind": "boolean",
+      "label": "Flattening Enabled",
+      "description": "A boolean value indicating whether or not to flatten the response data.",
+      "protected": false
+    },
+    {
+      "name": "flattening_max_depth",
+      "kind": "integer",
+      "label": "Flattening Max Depth",
+      "description": "An integer value indicating the maximum depth to flatten the response data.",
+      "protected": false
+    },
+    {
+      "name": "password",
+      "kind": "password",
+      "label": "Password",
+      "description": "The password for the Abicart API user.",
+      "protected": false
+    },
+    {
+      "name": "stream_map_config",
+      "kind": "object",
+      "label": "Stream Map Config",
+      "description": "A configuration object for mapping data streams.",
+      "protected": false
+    },
+    {
+      "name": "stream_maps",
+      "kind": "object",
+      "label": "Stream Maps",
+      "description": "An array of data stream maps.",
+      "protected": false
+    },
+    {
+      "name": "username",
+      "kind": "string",
+      "label": "Username",
+      "description": "The username for the Abicart API user.",
+      "protected": false
+    },
+    {
+      "name": "webshop",
+      "kind": "string",
+      "label": "Webshop",
+      "description": "The name or ID of the Abicart webshop to connect to.",
+      "protected": false
+    }
+  ]
+}
